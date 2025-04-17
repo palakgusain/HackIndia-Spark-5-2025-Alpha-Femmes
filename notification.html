@@ -1,0 +1,140 @@
+<!-- notifications.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notifications</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f8e1f4, #fceabb);
+      min-height: 100vh;
+    }
+
+    .content {
+      width: 100%;
+      padding: 40px;
+      background-color: #fff0f6;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      color: #5e548e;
+      margin-bottom: 30px;
+    }
+
+    .notification {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background-color: #ffffff;
+      border-left: 8px solid #c77dff;
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s;
+      animation: fadeInUp 0.4s ease;
+    }
+
+    .notification:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 28px;
+      margin-top: 6px;
+    }
+
+    .alert-icon {
+      color: #f72585;
+    }
+
+    .info-icon {
+      color: #4361ee;
+    }
+
+    .warning-icon {
+      color: #fca311;
+    }
+
+    .notification-content {
+      flex-grow: 1;
+    }
+
+    .notification-content strong {
+      font-size: 18px;
+      color: #7209b7;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .notification-content p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .time {
+      font-size: 13px;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>🔔 Notifications</h1>
+
+    <div class="notification">
+      <div class="icon alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+      <div class="notification-content">
+        <strong>Unauthorized Download</strong>
+        <p>Your video <em>“My Art Gallery”</em> was downloaded by someone without permission.</p>
+        <div class="time">Just now</div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <div class="icon warning-icon"><i class="fas fa-user-secret"></i></div>
+      <div class="notification-content">
+        <strong>Content Misuse Detected</strong>
+        <p>Your video <em>“AI Voice Demo”</em> is being used in another app without your consent.</p>
+        <div class="time">12 minutes ago</div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <div class="icon info-icon"><i class="fas fa-share-alt"></i></div>
+      <div class="notification-content">
+        <strong>Untracked Sharing Alert</strong>
+        <p>One of your videos was shared without setting appropriate usage terms.</p>
+        <div class="time">Today at 9:34 AM</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

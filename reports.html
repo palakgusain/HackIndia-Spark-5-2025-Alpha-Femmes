@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8e1f4, #fceabb);
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #5e548e;
+      margin-bottom: 30px;
+    }
+
+    .reports-container {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .report {
+      background-color: #fceff9;
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #343a40;
+    }
+
+    .report strong {
+      color: #9d4edd;
+    }
+
+    .report small {
+      display: block;
+      color: #666;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .report:hover {
+      background-color: #f9d7ec;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reports</h1>
+  <div class="reports-container">
+    <div class="report">
+      <strong>Unauthorized Download Attempt</strong>
+      A user tried to download your content "VoiceArt_Project.mp4" without valid consent.
+      <small>Timestamp: 2025-04-17 | Action Taken: Alert sent to creator</small>
+    </div>
+    <div class="report">
+      <strong>Consent Changed</strong>
+      You updated the access level of "StoryClip_Freedom.mp4" to <em>Public</em>.
+      <small>Timestamp: 2025-04-16 | Action Logged</small>
+    </div>
+    <div class="report">
+      <strong>Content Flagged</strong>
+      Your content "AI_MusicBeat.wav" was flagged by another user for possible unauthorized reuse.
+      <small>Timestamp: 2025-04-15 | Action Taken: Under Review</small>
+    </div>
+    <div class="report">
+      <strong>Download Approved</strong>
+      Your content "PoetryVisual_001.mp4" was successfully downloaded by a verified user.
+      <small>Timestamp: 2025-04-14 | Consent Status: Public</small>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8e1f4, #fceabb);
+      margin: 0;
+      padding: 30px;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff0f6;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #5e548e;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .settings-section {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .settings-section h2 {
+      font-size: 24px;
+      color: #343c6f;
+      margin-bottom: 15px;
+    }
+
+    .settings-section label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .settings-section input[type="text"],
+    .settings-section input[type="email"],
+    .settings-section input[type="password"],
+    .settings-section select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: inherit;
+    }
+
+    .save-btn {
+      background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      display: block;
+      width: 100%;
+    }
+
+    .save-btn:hover {
+      background: linear-gradient(135deg, #5a6afc, #ff497b);
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <h1>Settings</h1>
+
+    <!-- Profile Settings -->
+    <div class="settings-section">
+      <h2>Profile</h2>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" />
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" />
+      <label>Password</label>
+      <input type="password" placeholder="Enter new password" />
+    </div>
+
+    <!-- Consent Preferences -->
+    <div class="settings-section">
+      <h2>Consent Preferences</h2>
+      <label>Default Access Type</label>
+      <select>
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+      </select>
+      <label>
+        <input type="checkbox" />
+        Notify me when someone tries to use my content
+      </label>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="settings-section">
+      <h2>Notification Settings</h2>
+      <label>
+        <input type="checkbox" checked />
+        Email alerts when my video is accessed
+      </label>
+      <label>
+        <input type="checkbox" />
+        Push notifications for suspicious activity
+      </label>
+    </div>
+
+    <!-- Save Button -->
+    <button class="save-btn">Save Changes</button>
+  </div>
+  <button onclick="logout()">Logout</button>
+
+<script>
+  function logout() {
+    localStorage.removeItem('prooflyUser');
+    window.location.href = 'login.html';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Main</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+    #content-area iframe {
+  width: 100%;
+  height: 600px;  /* or whatever height fits well */
+  border: none;
+}
+
+
+    .sidebar {
+      width: 250px;
+      background: linear-gradient(to bottom, #6a82fb, #fc5c7d);
+      color: white;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+    .main {
+      flex: 1;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      padding: 30px;
+      overflow-y: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .content-area {
+      width: calc(100% - 250px); /* Adjusted width to take up more space */
+      padding: 20px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      min-height: 80vh; /* Increased minimum height for better visibility */
+    }
+    h1 {
+      color: #6a82fb;
+      font-size: 32px; /* Increased font size */
+      font-weight: 600;
+    }
+    p {
+      color: #333;
+      font-size: 18px; /* Increased font size */
+      line-height: 1.6;
+    }
+    .feature-box {
+      margin-top: 30px;
+      background-color: #f5a5b6;  /* Lighter pinkish color */
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+    }
+    .feature-box h3 {
+      font-size: 24px; /* Increased font size */
+      margin-bottom: 15px;
+    }
+    .feature-box ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .feature-box ul li {
+      font-size: 18px; /* Increased font size */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>PROOFLY</h2>
+    <a onclick="loadPage('upload.html')">Upload</a>
+    <a onclick="loadPage('consent.html')">Consent</a>
+    <a onclick="loadPage('notification.html')">Notifications</a>
+    <a onclick="loadPage('profile.html')">Profile</a>
+    <a onclick="loadPage('support.html')">Support</a>
+    <a onclick="loadPage('messages.html')">Messages</a>
+    <a onclick="loadPage('reports.html')">Reports</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="content-area" id="content-area">
+      <h1>Welcome to Proofly Dashboard</h1>
+      <p>Welcome to Proofly, the platform designed to protect and manage your content. With the power of AI and blockchain technology, Proofly offers a secure and transparent way to protect your digital assets. Here, you'll find tools to upload, track, and secure your content.</p>
+
+      <div class="feature-box">
+        <h3>Key Features of Proofly</h3>
+        <ul>
+          <li><strong>Content Protection:</strong> Easily upload and store your content securely using blockchain technology.</li>
+          <li><strong>Real-Time Notifications:</strong> Get notified instantly whenever someone uses your content without permission.</li>
+          <li><strong>Consent Management:</strong> Control who can access or use your content with a simple, intuitive consent system.</li>
+          <li><strong>Ownership Transparency:</strong> With blockchain-backed proofs, ownership is always clear and immutable.</li>
+        </ul>
+      </div>
+
+      <div class="feature-box">
+        <h3>Why Choose Proofly?</h3>
+        <p>Proofly offers unmatched security, transparency, and ease of use for content creators, brands, and digital media professionals. Whether you are an artist, influencer, or company, Proofly ensures that your content remains protected at all times.</p>
+        <ul>
+          <li><strong>AI-Powered Detection:</strong> Our AI technology scans the internet for unauthorized use of your content.</li>
+          <li><strong>Blockchain Verification:</strong> All your uploads are recorded on the blockchain, making them verifiable and tamper-proof.</li>
+          <li><strong>Complete Control:</strong> You decide who can access and use your content, offering full control over your creations.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Loading Script -->
+  <script>
+    function loadPage(page) {
+      const contentArea = document.getElementById('content-area');
+      const iframe = document.createElement('iframe');
+      iframe.src = page;
+      contentArea.innerHTML = '';
+      contentArea.appendChild(iframe);
+    }
+  </script>
+
+</body>
+</html>

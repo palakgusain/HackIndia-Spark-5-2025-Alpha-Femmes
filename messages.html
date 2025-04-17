@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8e1f4, #fceabb);
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #5e548e;
+      margin-bottom: 30px;
+    }
+
+    .messages-box {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .message {
+      padding: 18px 22px;
+      border-radius: 12px;
+      background-color: #fceff9;
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #343a40;
+    }
+
+    .message strong {
+      color: #7b2cbf;
+    }
+
+    .message-input {
+      margin-top: 30px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .message-input textarea {
+      flex: 1;
+      padding: 16px;
+      font-size: 17px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-family: inherit;
+    }
+
+    .send-btn {
+      background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 17px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .send-btn:hover {
+      background: linear-gradient(135deg, #5a6afc, #ff497b);
+    }
+  </style>
+</head>
+<body>
+  <h1>Messages</h1>
+  <div class="messages-box">
+    <div class="message">
+      <strong>Admin:</strong> Your content "MyCreativeShort.mp4" was downloaded by an unverified user. Please review your consent settings.
+    </div>
+    <div class="message">
+      <strong>User123:</strong> Hi! I loved your video. Could I get permission to use it in my upcoming project?
+    </div>
+    <div class="message">
+      <strong>System:</strong> Your content has been approved and made public as per your latest consent update.
+    </div>
+
+    <div class="message-input">
+      <textarea rows="3" placeholder="Type your message..."></textarea>
+      <button class="send-btn">Send</button>
+    </div>
+  </div>
+</body>
+</html>

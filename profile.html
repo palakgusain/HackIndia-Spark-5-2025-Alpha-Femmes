@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proofly - My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      height: 100vh;
+      background: linear-gradient(to right, #f8e1f4, #fceabb);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content {
+      width: 100%;
+      padding: 40px;
+      background: #fff0f6;
+    }
+
+    .profile-card {
+      max-width: 700px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      text-align: center;
+      border: 2px solid #fceabb;
+    }
+
+    .profile-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #c77dff;
+    }
+
+    .profile-card h2 {
+      font-size: 26px;
+      color: #5e548e;
+      margin-bottom: 5px;
+    }
+
+    .profile-card p {
+      color: #6c757d;
+      margin-bottom: 12px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .profile-details {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .profile-details div {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .profile-details strong {
+      color: #7b2cbf;
+    }
+
+    .edit-btn {
+      margin-top: 25px;
+      background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: bold;
+    }
+
+    .edit-btn:hover {
+      background: linear-gradient(135deg, #5a6afc, #ff497b);
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .stats div {
+      background-color: #e0eafc;
+      border-radius: 12px;
+      padding: 15px;
+      width: 30%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .stats div h3 {
+      font-size: 20px;
+      color: #6a82fb;
+      margin-bottom: 5px;
+    }
+
+    .stats div p {
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="profile-card">
+      <div style="text-align:center">
+        <img id="userImage" src="https://via.placeholder.com/120" alt="User Image">
+        <h2 id="userName">John Doe</h2>
+        <p id="userEmail">john.doe@email.com</p>
+      </div>
+      <div class="profile-details">
+        <div><strong>Phone:</strong> <span id="userPhone">+1 9876543210</span></div>
+        <div><strong>Gender:</strong> <span id="userGender">Male</span></div>
+        <div><strong>Joined:</strong> <span id="userJoined">January 2024</span></div>
+      </div>
+      <div class="stats">
+        <div>
+          <h3>Total Posts</h3>
+          <p>18</p>
+        </div>
+        <div>
+          <h3>Consent Approvals</h3>
+          <p>12</p>
+        </div>
+        <div>
+          <h3>Reports Raised</h3>
+          <p>3</p>
+        </div>
+      </div>
+      <button class="edit-btn" onclick="alert('Redirecting to edit profile page')">Edit Profile</button>
+    </div>
+  </div>
+
+  <script>
+    // Fetch user data from local storage and populate the profile
+    const userData = JSON.parse(localStorage.getItem('prooflyUser'));
+    if (userData) {
+      document.getElementById('userName').innerText = userData.username;
+      document.getElementById('userEmail').innerText = userData.email;
+      document.getElementById('userPhone').innerText = userData.phone;
+      document.getElementById('userGender').innerText = userData.gender;
+      document.getElementById('userJoined').innerText = userData.joinedOn;
+    }
+  </script>
+</body>
+</html>
