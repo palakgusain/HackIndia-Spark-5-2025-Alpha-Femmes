@@ -32,6 +32,6 @@ Proofly is a platform designed to protect and manage digital content using AI an
 To get started with the project, clone the repository and install the necessary dependencies:
 
 ```bash
-To start the server, run:
+To start the server, run: signup.html First.
 
 
